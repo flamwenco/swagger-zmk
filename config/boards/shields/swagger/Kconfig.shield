@@ -1,0 +1,8 @@
+# Copyright (c) 2023 Flamwenco
+# SPDX-License-Identifier: MIT
+
+config SHIELD_SWAGGER_LEFT
+    def_bool $(shields_list_contains, swagger_left)
+
+config SHIELD_SWAGGER_RIGHT
+    def_bool $(shields_list_contains, swagger_right)

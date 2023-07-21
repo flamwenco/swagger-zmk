@@ -1,0 +1,12 @@
+file_format: "1"
+id: swagger
+name: Swagger
+type: shield
+url: https://github.com/flamwenco/swagger/
+requires: [pro_micro]
+features:
+  - keys
+  - underglow
+siblings:
+  - swagger_left
+  - swagger_right
