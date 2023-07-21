@@ -6,7 +6,6 @@ url: https://github.com/flamwenco/swagger/
 requires: [pro_micro]
 features:
   - keys
-  - underglow
 siblings:
   - swagger_left
   - swagger_right
