@@ -37,10 +37,10 @@
 
                 lower_layer {
                         bindings = <
-   AS(GRAVE) AS(1) AS(2)   AS(3)  AS(4)  AS(5)   AS(6)     AS(7)      AS(8)     AS(9)    AS(0)    &kp DEL
-   &trans    &none  &none  &none  &none  &none   &kp LBKT  &kp MINUS  &kp EQUAL &kp SEMI &trans
-   &trans    &none  &none  &none  &none  &none   &kp RBKT  &kp APOS   &kp PIPE  &none    &none
-   &trans    &trans &trans &trans                &trans               &trans    &trans   &trans
+   AS(GRAVE) AS(N1)  AS(N2)  AS(N3)  AS(N4)  AS(N5)   AS(N6)     AS(N7)      AS(N8)     AS(N9)    AS(N0)    &kp DEL
+   &trans    &none   &none   &none   &none   &none    &kp LBKT   &kp MINUS   &kp EQUAL  &kp SEMI  &trans
+   &trans    &none   &none   &none   &none   &none    &kp RBKT   &kp APOS    &kp PIPE   &none     &none
+   &trans    &trans  &trans  &trans                   &trans                 &trans     &trans    &trans
                         >;
                 };
 
