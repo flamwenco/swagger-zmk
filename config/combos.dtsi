@@ -1,0 +1,22 @@
+compatible = "zmk,combos";
+
+#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
+  combo_##NAME { \
+    bindings = <BINDINGS>; \
+    key-positions = <KEYPOS>; \
+    layers = <LAYERS>; \
+  };
+
+/* Function keys */
+COMBO(f1,  &kp F1, 1 16, 1)
+COMBO(f2,  &kp F2, 2 16, 1)
+COMBO(f3,  &kp F3, 3 16, 1)
+COMBO(f4,  &kp F4, 4 16, 1)
+COMBO(f5,  &kp F5, 5 16, 1)
+COMBO(f6,  &kp F6, 6 16, 1)
+COMBO(f7,  &kp F7, 7 16, 1)
+COMBO(f8,  &kp F8, 8 16, 1)
+COMBO(f9,  &kp F9, 9 16, 1)
+COMBO(f10, &kp F10, 10 16, 1)
+COMBO(f11, &kp F11, 1 17, 1)
+COMBO(f12, &kp F12, 2 17, 1)

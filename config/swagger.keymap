@@ -11,6 +11,10 @@
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 
 / {
+        combos {
+            #include "combos.dtsi"
+        };
+
         behaviors {
             as: auto_shift {
                 compatible = "zmk,behavior-hold-tap";
@@ -38,18 +42,18 @@
                 lower_layer {
                         bindings = <
    AS(GRAVE) AS(N1)  AS(N2)  AS(N3)  AS(N4)  AS(N5)   AS(N6)     AS(N7)      AS(N8)     AS(N9)    AS(0)    &kp DEL
-   &trans    &none   &none   &none   &none   &none    AS(LBKT)   AS(MINUS)   AS(EQUAL)  AS(SEMI)  &trans
-   &trans    &none   &none   &none   &none   &none    AS(RBKT)   AS(APOS)    AS(PIPE)   &none     &none
+   &trans    &none   &none   &none   &kp F   &kp G    AS(LBKT)   AS(MINUS)   AS(EQUAL)  AS(SEMI)  &trans
+   &trans    &none   &none   &none   &none   &none    AS(RBKT)   AS(APOS)    AS(BSLH)   &none     &none
    &trans    &trans  &trans  &trans                   &trans                 &trans     &trans    &trans
                         >;
                 };
 
                 raise_layer {
                         bindings = <
-   &none     &none   &none   &none   &none   &none    &none      &none       &none      &none      &none    &kp DEL
-   &trans    &none   &none   &none   &none   &none    &kp LEFT   &kp DOWN    &kp UP     &kp RIGHT  &trans
-   &trans    &none   &none   &none   &none   &none    &none      &none       &none      &none      &none
-   &trans    &trans  &trans  &trans                   &trans                 &trans     &trans     &trans
+   &none     &none   &kp K_VOL_UP &kp K_MUTE   &kp K_VOL_DN  &none      &none      &kp K_PREV  &kp KC_PP  &kp K_NEXT &none    &kp DEL
+   &trans    &none   &none        &none        &none         &none      &kp LEFT   &kp DOWN    &kp UP     &kp RIGHT  &trans
+   &trans    &none   &none        &none        &none         &none      &none      &none       &none      &none      &none
+   &trans    &trans  &trans       &trans                                &trans                 &trans     &trans     &trans
                         >;
                 };
 
