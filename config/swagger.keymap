@@ -14,9 +14,10 @@
 // Combo helper
 #define COMBO(NAME, BINDINGS, KEYPOS) \
     combo_##NAME { \
+        timeout-ms = <100>;
         bindings = <BINDINGS>; \
         key-positions = <KEYPOS>; \
-        layers = <1>; \
+        layers = <LAYERS>; \
     };
 
 &mt {
@@ -40,6 +41,9 @@
         COMBO(ften,    &kp F10, 10 16)
         COMBO(feleven, &kp F11, 1 17)
         COMBO(ftwelve, &kp F12, 2 17)
+
+        /* Enter */
+        COMBO(klenter, &kp RET, 20 21, 0)
     };
 
     behaviors {
