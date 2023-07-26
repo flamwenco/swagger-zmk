@@ -12,9 +12,9 @@
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 
 // Combo helper
-#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
+#define COMBO(NAME, BINDINGS, KEYPOS, TIMEOUT, LAYERS) \
     combo_##NAME { \
-        timeout-ms = <100>; \
+        timeout-ms = <TIMEOUT>; \
         bindings = <BINDINGS>; \
         key-positions = <KEYPOS>; \
         layers = <LAYERS>; \
@@ -29,21 +29,21 @@
         compatible = "zmk,combos";
         
         /* Function keys */
-        COMBO(fnone,   &kp F1,  1 16,  1)
-        COMBO(ftwo,    &kp F2,  2 16,  1)
-        COMBO(fthree,  &kp F3,  3 16,  1)
-        COMBO(ffour,   &kp F4,  4 16,  1)
-        COMBO(ffive,   &kp F5,  5 16,  1)
-        COMBO(fsix,    &kp F6,  6 16,  1)
-        COMBO(fseven,  &kp F7,  7 16,  1)
-        COMBO(feight,  &kp F8,  8 16,  1)
-        COMBO(fnine,   &kp F9,  9 16,  1)
-        COMBO(ften,    &kp F10, 10 16, 1)
-        COMBO(feleven, &kp F11, 1 17,  1)
-        COMBO(ftwelve, &kp F12, 2 17,  1)
+        COMBO(fnone,   &kp F1,  1 16,  50,  1)
+        COMBO(ftwo,    &kp F2,  2 16,  50,  1)
+        COMBO(fthree,  &kp F3,  3 16,  50,  1)
+        COMBO(ffour,   &kp F4,  4 16,  50,  1)
+        COMBO(ffive,   &kp F5,  5 16,  50,  1)
+        COMBO(fsix,    &kp F6,  6 16,  50,  1)
+        COMBO(fseven,  &kp F7,  7 16,  100, 1)
+        COMBO(feight,  &kp F8,  8 16,  100, 1)
+        COMBO(fnine,   &kp F9,  9 16,  100, 1)
+        COMBO(ften,    &kp F10, 10 16, 100, 1)
+        COMBO(feleven, &kp F11, 1 17,  50,  1)
+        COMBO(ftwelve, &kp F12, 2 17,  50,  1)
 
         /* Enter */
-        COMBO(klenter, &kp RET, 20 21, 0)
+        COMBO(klenter, &kp RET, 20 21, 100, 0)
     };
 
     behaviors {
