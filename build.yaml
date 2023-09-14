@@ -3,5 +3,5 @@ include:
     shield: swagger_left
   - board: nice_nano_v2
     shield: swagger_right
-#  - board: nice_nano_v2
-#    shield: settings_reset
+  - board: nice_nano_v2
+    shield: settings_reset
